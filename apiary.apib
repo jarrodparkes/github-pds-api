@@ -1,0 +1,27 @@
+FORMAT: 1A
+HOST: http://private-95728-githubpds.apiary-mock.com
+
+# Github PDS API
+
+Github PDS is an API for retrieving data that has been scraped from [GitHub's public Big Query data store](https://cloud.google.com/bigquery/public-data/github). To run raw "big queries", use [this link](https://bigquery.cloud.google.com/dataset/bigquery-public-data:github_repos).
+
+## Languages [/languages]
+
+### Languages [GET]
+This action returns a listing of every language used across GitHub and the number of repositories where the specified language is the main language (based on bytes).
+
++ Response 200 (application/json)
+
+        {
+            endpoint: "/languages",
+            results: [
+                {
+                    "language": "Javascript",
+                    "count": 1122774
+                },
+                {
+                    "language": "Javascript",
+                    "count": 840549
+                }
+            ]
+        }
